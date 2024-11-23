@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding: 0;
+            font-family: math;
+        }
+        body{
+            background-image: linear-gradient(90deg,rgb(131, 101, 241),rgb(101, 173, 241));
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        }
+
+.main{
+    background-color: rgb(255, 255, 255);
+    border: rgb(255, 255, 255) 1px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+
+h2{
+    background-color:rgb(58, 45, 105);
+    color: white;
+    padding: 1.2rem;
+}
+label{
+    display: block;
+    margin-top: 15px;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(58, 45, 105);
+}
+input{
+    font-size: medium;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+button{
+    background-color:rgb(58, 45, 105);
+    color: white;
+    font-size: large;
+    padding: 10px;
+}
+
+#result{
+    padding: 12px 70px;
+    margin-top: 15px;
+    font-size: large;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h2>AGE CALCULATOR</h2>
+        <label for="dob">Enter the Date of Birth</label>
+        <input type="date" name="dob" id="dob">
+        <label for="currentdate">Enter the Date of Age to be calculate </label>
+        <input type="date" name="currentdate" id="currentdate">
+        <button type="button" onclick="cal()">Calculate</button>
+     </div>
+
+        <div id="result">
+        </div>
+     <script>
+         cal=()=>{
+        current=parseFloat(document.getElementById("currentdate").value)
+        dob=parseFloat(document.getElementById("dob").value)
+
+        if (isNaN(current) || isNaN(dob) || current <= 0 || dob <= 0 ) {
+                document.getElementById("result").innerText = "Please enter valid positive numbers.";
+            }
+            else{
+                age=current-dob
+        document.getElementById("result").innerText=`Age is ${age.toFixed(0)} years`
+        resul=document.getElementById("result")
+        resul.style.backgroundColor="white"
+        resul.style.color="rgb(58, 45, 105)"
+            }
+
+         }
+
+
+     </script>
+
+
+
+   
+
+</body>
+</html>

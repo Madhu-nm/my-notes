@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple interest calculator</title>
+    <style>
+    *{
+      margin: 0;
+  }
+  
+  input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
+      display: none;
+  }
+  body{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(164, 106, 219);
+  }
+  .main{
+      background-color: white;
+      padding: 1.2rem;
+      border-radius: 1rem;
+  }
+  
+  #form{
+      display: flex;
+      flex-direction: column;
+  
+  }
+  input{
+  padding: .8rem;
+  margin: 10px;
+  font-size: 1.2rem;
+  }
+  
+  h2{
+      color: white;
+      text-align: center;
+      margin: 10px;
+      padding: 20px;
+      background-color: blueviolet;
+     
+  }
+  .btn{
+      display: flex;
+      flex-direction: row;
+      margin: 10px;
+  }
+  button{
+      padding: 10px;
+      width: 14rem;
+      background-color: blueviolet;
+      color: white;
+      font-size: large;
+      text-transform: uppercase;
+      border: 1px solid white;
+  }
+  #result{
+      padding: 1rem;
+      color: blueviolet;
+      font-size: 1.16rem;
+      font-weight: bolder;
+      text-align: center;
+  }
+  
+  input::placeholder{
+      font-size: 1rem;
+      text-transform: uppercase;
+  }
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 600px) {
+        .main {
+            padding: 1rem;
+            width: 90%;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        input {
+            font-size: 1rem;
+            padding: 0.6rem;
+        }
+
+        button {
+            width: 100%; /* Stack buttons vertically on small screens */
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        #result {
+            font-size: 1rem;
+        }
+    }
+
+  </style>
+</head>
+<body>
+    <div class="main">
+    <h2>SIMPLE INTEREST CALCULATOR</h2>
+    <form action="" id="form">
+    <input type="number" name="Principal" id="principal" placeholder="Principal Amount">
+    <input type="number" name="interest" id="interest" placeholder="Interest Rate in %">
+    <input type="number" name="time" id="time" placeholder="Time period in Years">
+    <div class="btn">
+    <button type="button" onclick="calculate()">Calculate</button>
+    <button type="reset">Clear</button>
+    </div>
+    </form>
+    <div id="result">
+    </div>
+</div>
+
+<script>
+  calculate=()=>{
+  principal=  parseFloat(document.getElementById("principal").value)
+  roi= parseFloat(document.getElementById("interest").value)
+  yrs=  parseFloat(document.getElementById("time").value)
+
+  if (isNaN(principal) || isNaN(roi) || isNaN(yrs) || principal <= 0 || roi <= 0 || yrs <= 0) {
+                document.getElementById("result").innerText = "Please enter valid positive numbers.";
+            }
+
+else{
+    temp= (principal * roi * yrs)
+  earned= (temp/100)
+  amount= (earned + principal)
+  document.getElementById("result").innerText = `Interest Earned is Rs: ${earned} 
+  
+  Total Amount is Rs: ${amount}` 
+
+}
+  
+          }
+  </script>
+</body>
+</html>

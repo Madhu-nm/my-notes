@@ -1,0 +1,72 @@
+
+.ccv{
+    font-size: 1.5rem;
+}
+.ccvs{
+    font-size: 1.2rem;
+}
+.nav-link1:hover{
+    text-decoration: underline;
+    text-decoration-color:rgb(255, 255, 255) ;
+    margin-top: 1px;
+}
+.dropdown-item:active{
+    background-color: rgb(9, 59, 9);
+}
+.up-banner{
+    background-color: rgb(9, 59, 9);
+}
+.carousel-caption{
+    left: 5%;
+    top: 3%;
+}
+.nav-link2{
+    color: white;
+    font-weight: bolder;
+}
+.nav-link2:hover{
+    color: white;
+    margin-top: 2px;
+}
+
+.cnav {
+    --bs-nav-link-padding-x: 0.5rem;
+}
+@media  (min-width: 600px) {
+    .carousel-caption{
+        top: 10%;
+    }
+    .ccv {
+font-size: 2.5rem;
+    }
+    .ccvs {
+        font-size: 1.8rem;
+            }
+            .eth{
+                font-size: 1.5rem;
+            }
+            .bsn{
+                font-size: 1rem;
+                margin-top: 1.5rem;
+            }
+}
+@media  (min-width: 1000px) {
+    .carousel-caption{
+        top: 10%;
+    }
+    .ccv {
+  font-size: 5rem;
+    }
+    .ccvs {
+        font-size: 4rem;
+            }
+            .eth{
+                font-size: 2rem;
+            }
+            .bsn{
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+                margin-left: 10px;
+                
+            }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD CALCULATOR</title>
+    <style>
+          *{
+      margin: 0;
+  }
+  
+  input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
+      display: none;
+  }
+  body{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(164, 106, 219);
+  }
+  .main{
+      background-color: white;
+      padding: 1.2rem;
+      border-radius: 1rem;
+  }
+  form{
+      display: flex;
+      flex-direction: column;
+      margin-top: 18px;
+  }
+  label{
+      color: rgb(83, 24, 138);
+      font-size: large;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 10px;
+      padding: 2px;
+      text-align: center;
+  }
+  input{
+    padding: 6px;
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  button{
+      padding: 10px;
+      background-color: rgb(83, 24, 138);
+      color: white;
+      font-size: large;
+      text-transform: uppercase;
+      border: 1px solid white;
+      margin-top: 10px;
+  }
+  #result{
+      padding: 1rem;
+      color: rgb(83, 24, 138);
+      font-size: 1.16rem;
+      font-weight: bolder;
+      text-align: center;
+  }
+  
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h3 style="background-color: rgb(83, 24, 138); color: white; padding: 10px;">FIXED DEPOSIT CALCULATOR</h3>
+        <form action="">
+            <label for="principal">Principal</label>
+            <input type="number" name="principal" id="principal">
+            <label for="interest">Interest rate</label>
+            <input type="number" name="interest" id="interest">
+            <label for="years">Time period</label>
+            <input type="number" name="years" id="years">
+            <button type="button" onclick="calculate()">Calculate</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+            calculate=()=>{
+  principal= parseInt(document.getElementById("principal").value)
+  roi= parseInt(document.getElementById("interest").value)
+  yrs=  parseInt(document.getElementById("years").value)
+
+  if (isNaN(principal) || isNaN(roi) || isNaN(yrs) || principal <= 0 || roi <= 0 || yrs <= 0) {
+                document.getElementById("result").innerText = "Please enter valid positive numbers.";
+            }
+
+else{
+    temp= (principal * roi * yrs)
+  earned= (temp/100)
+  amount= (earned + principal)
+  document.getElementById("result").innerText = `Interest Earned is Rs: ${earned} 
+  
+  Total Amount is Rs: ${amount}` 
+
+}
+            }
+    </script>
+</body>
+</html>

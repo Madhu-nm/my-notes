@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gram to pavan and pavan to gram calculator</title>
+
+    <style>
+        *{
+            margin:0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
+            display: none;
+ }
+
+        .main{
+            background-color: rgb(175, 41, 23);
+         color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+           
+        }
+
+        input,select,option,button{
+            padding: 10px;
+            font-size: medium;
+            font-weight: bold;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="main">
+    <h2>GRAM , PAVAN CONVERTER</h2>
+    <form action="">
+        <input type="number" name="" id="input" placeholder="Enter the value" > 
+        <br>
+        <select name="converter" id="from-unit">
+            <option value="gram">Gram to Pavan</option>
+            <option value="pavan">Pavan to Gram </option>
+        </select>
+<br>
+     <button type="button" onclick="cal()">Calculate</button>
+    </form>
+<div id="result"></div>
+
+</div>
+
+<script>
+    cal=()=>
+    {
+        from= document.getElementById("from-unit").value
+        input= parseInt(document.getElementById("input").value)
+        result=""
+        if ( isNaN(input) || input<0) {
+            document.getElementById("result").innerText="Enter the positive values"
+        }
+        else{
+        if (from==="gram") {
+            result=(input/8)
+            document.getElementById("result").innerText= input + " Grams is " + result +" Pavans"
+        } else {
+            result=(input*8)
+            document.getElementById("result").innerText= input + " Pavans is " + result +" Grams"
+        }
+    }
+}
+</script>
+</body>
+</html>

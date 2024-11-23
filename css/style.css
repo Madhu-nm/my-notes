@@ -1,0 +1,101 @@
+body
+{
+    background-color: aquamarine ;
+   
+}
+h1 {
+    padding-top: 2em;
+}
+.A {
+    background-color: lightblue ;
+    height: 170px ;
+    width : 160px;
+    color: black ;
+    text-align: center ;
+    font-size : 50px ;
+    padding: 60px 6px 8px 8px;
+    border: black solid ;
+    border-bottom : 8px  dashed blue;
+    border-top-right-radius: 90px;
+    border-bottom-left-radius: 90px;
+    margin: 30px ;
+    outline-width: 20px ;
+    outline-style: auto ;
+    outline-color: brown ;
+    box-shadow : 3px 3px 10px 3px red ;
+   
+    
+}
+.p1 {
+    background-color: blueviolet ;
+    height: 60px;
+    width: 60px;
+}
+.p5 {
+    background-color: rgb(192, 226, 43) ;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+}
+.p2 {
+    background-color: violet ;
+    height: 60px;
+    width: 60px;
+    position: relative;
+    left: 30px;
+    right: 30px;
+}
+.p3 {
+    background-color: rgb(173, 28, 173) ;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+}
+.p4 {
+    background-color: blue ;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    top: 30em;
+    z-index: -1;
+}
+h1 {
+    color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+h3 {
+    color: rgba(29, 143, 219, 0.623) ;
+}
+h3::first-letter {
+    color: chocolate;
+    font-size: 3em;
+}
+p {
+    color: rgb(19, 175, 27) ;
+    font: x-large arial ;
+    font-style: italic ;
+    text-decoration: underline ;
+    text-decoration-color: black ;
+    text-shadow: 1px 1px 4px ;
+}
+ .f1 {
+     display: flex ;
+     padding: 1em;
+     margin-top: 4em;
+     background-color: aqua;
+     justify-content: space-evenly;
+
+ }
+ .s1 {
+     height: 40px;
+     width: 40px;
+     background-color: brown ;
+     padding: 1em ;
+     font-size: 2em;
+ }

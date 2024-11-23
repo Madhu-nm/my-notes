@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+
+nav ul{
+  display: flex;
+  list-style-type: none;
+  padding: 23px;
+  background-color: white;
+  font-weight: bolder;
+  font-size: 20PX;
+  box-shadow: 3px 3px 5px grey;
+  
+}
+nav a{
+  color: rgb(3, 3, 77);
+  text-decoration: none;
+}
+NAV UL li
+{ margin-right: 20PX;
+margin-left: 15PX;
+
+}
+
+.logo{
+  color:  rgb(3, 3, 77);
+  margin-right: 400PX;
+  margin-left: 50px;
+
+}
+nav a:hover {
+  color: rgb(207, 15, 63);
+ text-decoration: underline rgb(207, 15, 63); 
+ font-size: 23px;
+}
+.main {
+  color: rgb(3, 3, 77);
+  font-size: 1.8em;
+  padding: 30px;
+  background-color: rgb(194, 225, 255);
+border: 3em solid rgb(194, 225, 255);
+
+}
+.main img{
+  float: right;
+  box-shadow: 3px 3px 4px grey;
+  margin-top: 10px;
+}
+.main h3{
+  color: black;
+  font-size: 25px;
+  line-height: 50px;
+
+}
+.main A {
+  background-color: rgb(207, 15, 63);
+  font-size:18px;
+  padding: 15px;
+  color: white;
+text-decoration: none;
+border-radius: 0px 20px;
+box-shadow: 4px 4px 7px rgb(221, 124, 177);
+line-height: 65px;
+}
+.main a:hover{
+  font-size: 20px;
+  box-shadow: 6px 6px 10px rgb(221, 124, 177);
+}
+.abt > img {
+  float: left;
+height: 200px;
+width: 300px;
+padding: 10px;
+margin: 3.5em;
+
+
+}
+ h2 {
+  color: white;
+  padding: 10px;
+  font-weight: bolder;
+ text-align: center;
+ background-color: rgb(3, 3, 77);
+ padding: 10px;
+ 
+}
+.abt p{
+  margin: 2px 70px;
+  text-align: justify;
+  line-height: 20px;
+  border: 1em solid white;
+}
+.abt > h3 {
+  color: rgb(3, 3, 77);
+  padding: 10px;
+  font-size: 30px;
+  border-top: 2em  solid white;
+  
+}
+.abt > h5 {
+  color: rgb(207, 15, 63);
+  padding: 1px;
+  font-size: 15px;
+}
+ .skills{
+  display: flex;
+  background-color: rgb(194, 225, 255);
+  background-size:100%;
+  column-gap: 30px;
+  padding: 10px;
+  justify-content: center;
+  border-bottom: 3em solid rgb(194, 225, 255);
+  border-top: 1em solid rgb(194, 225, 255);
+}
+ .skills figure > img {
+  height: 150px;
+  width: 150px;
+filter: drop-shadow(3px 3px 6px )
+}
+figcaption{
+  font-weight: bold;
+  text-align: center;
+}
+
+.projects {
+  display: flex;
+    column-gap: 30px;
+  padding: 10px;
+  justify-content: center;
+  border: 3em solid white;
+}
+.projects figure > img{
+  height: 200px;
+  padding: .5em;
+  border: 2px solid rgb(3, 3, 77);
+  box-shadow: 3px 3px 6px rgb(3, 3, 77);
+}
+.projects figure > figcaption{
+  padding: 1em;
+  font-size: 1.2em;
+}
+.projects figure > figcaption > a{
+  color: white;
+  background-color: rgb(207, 15, 63);
+  padding: .5em;
+  font-size: .7em;
+}
+.projects figure > figcaption > a:hover{
+  box-shadow: 4px 4px 9px rgb(221, 124, 177);
+  font-size: .85em;
+}
+.edu1 {
+  display: inline-flex;
+  padding: 1em;
+  background-color: white;
+  border: 3px solid rgb(3, 3, 77);
+  margin: 10px;
+  column-gap: 50px;
+  font-size: 1em;
+  text-align: center;
+  line-height: 2.5em;
+align-items: center;
+}
+span{
+  font-size:2em;
+  padding: 1em;
+  color: rgb(3, 3, 77);
+}
+.edu1 img {height: 150px;}
+
+#et1 {
+  font-size: 1.1em;
+  color: rgb(207, 15, 63) ;
+}
+.ct{
+  color: rgb(3, 3, 77);
+ border: dashed 3px rgb(3, 3, 77);
+  padding: 2em;
+  justify-content: center;
+  font-weight: bold;
+  display: flex;
+  column-gap: 50px;
+  margin: 3px;
+}

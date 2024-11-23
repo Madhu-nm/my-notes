@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculator</title>
+    <style>
+        *{
+            margin: 0;
+        }
+
+        input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
+            display: none;
+        }
+
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(40, 95, 177);
+        }
+
+        .main{
+            background-color: white;
+            padding: 2%;
+            border-radius: 12px;
+            color: rgb(21, 60, 119);
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        input{
+            padding: 6px;
+            font-size: large;
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+
+        label{
+            margin-top: 10px;
+            font-weight: bolder;
+            font-size: large;
+            text-transform: uppercase;
+        }
+
+        h1,button{
+            text-transform: uppercase;
+            padding: 15px;
+            font-size: 1.5rem;
+            background-color: rgb(21, 60, 119);
+            color: white;
+        }
+
+        button{
+            font-size: 1rem;
+            font-weight: bolder;
+        }
+
+        .btn{
+            display: flex;
+            justify-content: center;
+        }
+
+        #results{
+            line-height: 1.7rem;
+            font-weight: bolder;
+            margin: 0px 20px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <H1>Salary calculator</H1>
+        <form id="form">
+            <label for="ctc">Yearly SALARY / CTC</label>
+            <input type="number" name="ctc" id="ctc" placeholder="Example:250000">
+            <label for="wdays">Working days per week</label>
+            <input type="number" name="wdays" id="wdays" placeholder="Example:5">
+            <label for="whours">Working hours per day</label>
+            <input type="number" name="whours" id="whours" placeholder="Example:9">
+            <div class="btn">
+                <button type="button" onclick="calculate()">CALCULATE</button>
+            </div>
+        </form>
+
+        <div id="results">
+            <div id="monthly"></div>
+            <div id="weekly"></div>
+            <div id="daily"></div>
+            <div id="hourly"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+
+            let ctc = parseFloat(document.getElementById("ctc").value)
+            let wdays = parseFloat(document.getElementById("wdays").value)
+            let whours = parseFloat(document.getElementById("whours").value)
+            
+    
+            if (isNaN(ctc) || isNaN(wdays) || isNaN(whours) || ctc <= 0 || wdays <= 0 || whours <= 0) {
+                document.getElementById("results").innerHTML = "Please enter valid positive values."
+            } else {
+                let monthlysal = (ctc / 12).toFixed(0)
+                let weeklysal = (ctc / 52).toFixed(0)
+                let dailysal = (ctc / (wdays * 52)).toFixed(0)
+                let hourlysal = (ctc / (whours * wdays * 52)).toFixed(0)
+                document.getElementById("results").innerText = `Monthly salary: ${monthlysal} 
+                Weekly salary ${weeklysal}
+                Daily salary ${dailysal}
+                Hourly salary ${hourlysal}` 
+
+
+
+            }
+        }
+    </script>
+</body>
+</html>

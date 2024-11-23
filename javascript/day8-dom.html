@@ -1,0 +1,101 @@
+<!-- DOCUMENT OBJECT MODEL
+TYPES- ELEMENT NODE, TEXT NODE, ATTRIBUTE NODE -->
+
+<!-- METHODS
+1.getelementby id -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demoo{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo">hello</div>
+    <!-- 2.getelementbyname -->
+    <form action="">
+    <label  name="gender">Gender-</label>
+    <input type="radio" name="gender" value="m">male
+    <input type="radio" name="gender" value="fm">female
+</form>
+<!-- 3.getelementbytagname -->
+     <p id="tag">hi</p>
+     <p id="tagg">am</p>
+     <p id="taggi">ff</p>
+     <h3 class="h3s">queryselector testing</h3>
+     <!-- 4.getelementbyclassname -->
+  <div class="value">1</div> 
+  <div class="value">2</div> 
+<!-- 6.Remove child -->
+<ul id="list">
+<li>HTML</li>
+<li>Css</li>
+<li>Js</li>
+<li>REACT</li>
+<li>JAVA</li>
+<li>REDUX</li>
+</ul>
+<button onclick="remove()">Remove</button>
+<!-- 7.replace child -->
+<button onclick="replace()">Replace</button>
+<!-- 10.create arrtibute -->
+<p id="set">CREATE ATTRIBUTE</p>
+             <!-- SCiRPT STARTING -->
+      <script>
+        // 1.getelementbyid 
+        const ans = document.getElementById("demo")
+        console.log(ans)
+        ans.style.color="red"
+        // 2.getelementbyname
+        const san = document.getElementsByName("gender").length
+        console.log(san)
+        document.getElementById("demo").innerHTML=san
+        //3.getelementbytagname & oru elemwnt vagi inonu la print panarathu yepadi
+        const tagna =document.getElementsByTagName("p")
+        console.log(tagna)
+        document.getElementById("tagg").innerHTML=tagna[0].innerHTML
+        //4.getelementbyclassname & js vechu anga new print panrathu yepadi
+        const clas =document.getElementsByClassName("value")
+        clas[0].innerHTML="welcome"
+        //5 create html element
+        const hH=document.createElement("h1")
+        hH.innerText="new element"
+        document.body.appendChild(hH)
+        //6.Remove child 
+        remove=()=>{
+            li= document.getElementById("list")
+            // li.removeChild(li.firstElementChild)
+            li.removeChild(li.lastElementChild)
+        }
+        //7.replace child
+        replace=()=>{
+        menu= document.getElementById("list")
+        li= document.createElement("li")
+        li.innerText="Python"
+        menu.replaceChild(li,menu.lastElementChild)}
+
+        //8.Query selector-css setting
+        document.querySelector("#tagg").style.color="red"
+
+        //9.Query selector all
+        all = document.querySelectorAll("#list")
+        for(i=0;i<all.length;i++){
+            all[i].style.color="blue"
+        }
+        //all css like querselector all
+        all = document.getElementById("list")
+        all.style.color="red"
+        //10.create arrtibute
+        document.getElementById("set").setAttribute("id","demoo")
+
+    </script>
+</body>
+</html>
+
+

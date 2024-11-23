@@ -1,0 +1,100 @@
+body{
+    background-color:  rgb(239, 218, 247) ;
+}
+.container{
+    background-color:  rgb(162, 76, 199) ;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    color: white;
+    margin: 1em;
+   
+}
+img{
+    width: 100px;
+    height: 50px;
+}
+
+.nav > ul{
+    display: flex;
+    list-style: none;
+    column-gap: 1em;
+    text-transform: capitalize;
+}
+
+.cart {
+    margin-right: 60px;
+}
+
+.grid{
+    background-color: rgb(162, 76, 199) ;
+    color: white;
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr); 
+    grid-template-areas: "i1 i1 i2 i3 i3 i4 i5 i5" 
+    "i1 i1 i2 i3 i3 i4 i5 i5" 
+     "i1 i1 i6 i3 i3 i7 i5 i5" 
+      "i1 i1 i6 i3 i3 i7 i5 i5" 
+       "i8 i9 i6 i10 i10 i11 i11 i12" 
+       "i8 i9 i13 i10 i10 i11 i11 i12" 
+       "i8 i14 i13 i10 i10 i11 i11 i12" 
+       "i8 i14 i15 i15 i16 i16 i16 i12" ;
+       grid-gap: 5px;
+       padding: 5px;
+    
+}
+.gg{
+    padding: 1em;
+    background-color: azure;
+    color:black;
+    border: 2px solid rgb(162, 76, 199);
+}
+.gitem1{
+    grid-area: i1;
+}
+.gitem2{
+    grid-area: i2;
+}
+.gitem3{
+    grid-area: i3;
+}
+.gitem4{
+    grid-area: i4;
+}
+.gitem5{
+    grid-area: i5;
+}
+.gitem6{
+    grid-area: i6;
+}
+.gitem7{
+    grid-area: i7;
+}
+.gitem8{
+    grid-area: i8;
+}
+.gitem9{
+    grid-area: i9;
+}
+.gitem10{
+    grid-area: i10;
+}
+.gitem11{
+    grid-area: i11;
+}
+.gitem12{
+    grid-area: i12;
+}
+.gitem13{
+    grid-area: i13;
+}
+.gitem14{
+    grid-area: i14;
+}
+.gitem15{
+    grid-area: i15;
+}
+.gitem16{
+    grid-area: i16;
+}
+
